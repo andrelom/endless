@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Foundation", "1. Foundation", "{68D9212B-B508-4697-8E4A-033F3707B9C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Feature", "2. Feature", "{E593CBB3-A86B-46C2-8DDF-CE1D07EE65F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Project", "3. Project", "{8CC1665D-28CE-45E9-91C1-7E6C147642D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless.Foundation.JSS", "src\Foundation\Endless.Foundation.JSS\Endless.Foundation.JSS.csproj", "{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless.Foundation.Core", "src\Foundation\Endless.Foundation.Core\Endless.Foundation.Core.csproj", "{182A1A36-37B3-4C69-8D5D-6979511757AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{182A1A36-37B3-4C69-8D5D-6979511757AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{182A1A36-37B3-4C69-8D5D-6979511757AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{182A1A36-37B3-4C69-8D5D-6979511757AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{182A1A36-37B3-4C69-8D5D-6979511757AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E2FC8E8-23AA-4F3F-997B-8C1749AA6FEF} = {68D9212B-B508-4697-8E4A-033F3707B9C6}
+		{182A1A36-37B3-4C69-8D5D-6979511757AE} = {68D9212B-B508-4697-8E4A-033F3707B9C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9910D49A-9992-46CB-8B8A-1139948AABEA}
+	EndGlobalSection
+EndGlobal

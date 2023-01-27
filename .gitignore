@@ -1,0 +1,14 @@
+#
+# Folders
+
+.vs/
+.idea/
+bin/
+obj/
+packages/
+
+#
+# Files
+
+*.user
+.env
