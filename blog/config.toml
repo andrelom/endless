@@ -17,7 +17,7 @@ env = 'production'
 title = 'Endless'
 description = 'Endless ideas for projects using Sitecore.'
 keywords = ['Sitecore', '.NET', 'C#']
-author = 'André Leandro de Oliveira Moraes'
+author = 'André Moraes'
 
 [params.label]
 text = 'André Moraes'
