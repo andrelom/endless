@@ -9,11 +9,6 @@ namespace Endless.Foundation.Core.Extensions
     {
         public static Item GetRelativeSite(this Item item)
         {
-            if (Sitecore.Context.Database?.IsCore() ?? true)
-            {
-                return null;
-            }
-
             var siteinfo = SiteContextFactory.Sites
                 .Where(entry => !string.IsNullOrWhiteSpace(entry.RootPath) && item.Paths.Path.StartsWith(entry.RootPath, StringComparison.OrdinalIgnoreCase))
                 .OrderByDescending(entry => entry.RootPath.Length)
@@ -24,7 +19,7 @@ namespace Endless.Foundation.Core.Extensions
                 return null;
             }
 
-            return Sitecore.Context.Database.GetItem(siteinfo.RootPath);
+            return Utilities.GetItem(siteinfo.RootPath);
         }
     }
 }
