@@ -8,6 +8,10 @@ contentDir = './content'
 
 title = 'André Moraes'
 
+[minify]
+disableXML = true
+minifyOutput = true
+
 [params]
 env = 'production'
 title = 'Endless'
@@ -33,3 +37,6 @@ url = 'https://www.linkedin.com/in/andrelom/'
 [[params.socialIcons]]
 name = 'email'
 url = 'mailto:andrelom@gmail.com'
+
+[params.assets]
+disableFingerprinting = true
