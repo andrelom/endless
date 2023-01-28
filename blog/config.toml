@@ -8,10 +8,6 @@ contentDir = './content'
 
 title = 'André Moraes'
 
-[minify]
-disableXML = true
-minifyOutput = true
-
 [params]
 env = 'production'
 title = 'Endless'
