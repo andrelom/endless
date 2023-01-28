@@ -12,3 +12,17 @@ packages/
 
 *.user
 .env
+
+#
+# Vendor: Hugo
+
+blog/public/
+blog/resources/_gen/
+
+blog/assets/jsconfig.json
+blog/hugo_stats.json
+blog/.hugo_build.lock
+
+blog/hugo.exe
+blog/hugo.darwin
+blog/hugo.linux
