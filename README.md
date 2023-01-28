@@ -1,6 +1,6 @@
 # Endless
 
-Endless ideas for projects using Sitecore.
+Endless ideas for Sitecore projects.
 
 ## Project Status
 
