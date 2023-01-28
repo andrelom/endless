@@ -15,7 +15,7 @@ minifyOutput = true
 [params]
 env = 'production'
 title = 'Endless'
-description = 'Endless ideas for projects using Sitecore.'
+description = 'Endless ideas for Sitecore projects.'
 keywords = ['Sitecore', '.NET', 'C#']
 author = 'André Moraes'
 
@@ -24,7 +24,7 @@ text = 'André Moraes'
 
 [params.homeInfoParams]
 title = 'Endless'
-content = 'Endless ideas for projects using Sitecore.'
+content = 'Endless ideas for Sitecore projects.'
 
 [[params.socialIcons]]
 name = 'github'
