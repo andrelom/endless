@@ -4,10 +4,36 @@ languageCode = 'en-us'
 theme = 'papermod'
 
 publishDir = '../docs'
-contentDir = './posts'
+contentDir = './content'
 
 title = 'André Moraes'
 
 [minify]
 disableXML = true
 minifyOutput = true
+
+[params]
+env = 'production'
+title = 'Endless'
+description = 'Endless ideas for projects using Sitecore.'
+keywords = ['Sitecore', '.NET', 'C#']
+author = 'André Leandro de Oliveira Moraes'
+
+[params.label]
+text = 'André Moraes'
+
+[params.homeInfoParams]
+title = 'Endless'
+content = 'Endless ideas for projects using Sitecore.'
+
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/andrelom/endless'
+
+[[params.socialIcons]]
+name = 'linkedin'
+url = 'https://www.linkedin.com/in/andrelom/'
+
+[[params.socialIcons]]
+name = 'email'
+url = 'mailto:andrelom@gmail.com'

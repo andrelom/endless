@@ -1,6 +1,6 @@
 # Endless
 
-An alchemy of ideas for projects using Sitecore JSS.
+Endless ideas for projects using Sitecore.
 
 ## Project Status
 
