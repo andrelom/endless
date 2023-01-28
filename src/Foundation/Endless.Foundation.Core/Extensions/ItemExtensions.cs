@@ -9,17 +9,17 @@ namespace Endless.Foundation.Core.Extensions
     {
         public static Item GetRelativeSite(this Item item)
         {
-            var siteinfo = SiteContextFactory.Sites
+            var site = SiteContextFactory.Sites
                 .Where(entry => !string.IsNullOrWhiteSpace(entry.RootPath) && item.Paths.Path.StartsWith(entry.RootPath, StringComparison.OrdinalIgnoreCase))
                 .OrderByDescending(entry => entry.RootPath.Length)
                 .FirstOrDefault();
 
-            if (siteinfo == null)
+            if (site == null)
             {
                 return null;
             }
 
-            return Utilities.GetItem(siteinfo.RootPath);
+            return Utilities.GetItem(site.RootPath);
         }
     }
 }
