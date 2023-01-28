@@ -7,3 +7,7 @@ publishDir = '../docs'
 contentDir = './posts'
 
 title = 'André Moraes'
+
+[minify]
+disableXML = true
+minifyOutput = true
