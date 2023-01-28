@@ -2,7 +2,7 @@ theme = 'paper'
 
 publishDir = '../docs'
 
-baseURL = 'http://example.org/'
+baseURL = 'https://andrelom.github.io/endless/'
 languageCode = 'en-us'
 
 title = 'André Moraes'
