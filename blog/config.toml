@@ -1,16 +1,9 @@
-theme = 'paper'
+baseURL = 'https://andrelom.github.io/endless/'
+languageCode = 'en-us'
+
+theme = 'papermod'
 
 publishDir = '../docs'
 contentDir = './posts'
 
-baseURL = 'https://andrelom.github.io/endless/'
-languageCode = 'en-us'
-
 title = 'André Moraes'
-
-[params]
-
-  color = 'linen'
-
-  github = 'andrelom'
-  linkedin = 'in/andrelom'
