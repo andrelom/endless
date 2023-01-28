@@ -1,5 +1,7 @@
 theme = 'paper'
 
+publishDir = '../docs'
+
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 
