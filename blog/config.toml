@@ -3,7 +3,7 @@ theme = 'paper'
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 
-title = 'My New Hugo Site'
+title = 'André Moraes'
 
 [params]
 
