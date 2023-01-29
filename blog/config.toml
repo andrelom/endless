@@ -8,6 +8,9 @@ contentDir = './content'
 
 title = 'André Moraes'
 
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
 [minify]
 disableXML = true
 minifyOutput = true
@@ -18,6 +21,9 @@ title = 'Endless'
 description = 'Endless ideas for Sitecore projects.'
 keywords = ['Sitecore', '.NET', 'C#']
 author = 'André Moraes'
+
+[params.assets]
+disableFingerprinting = true
 
 [params.label]
 text = 'André Moraes'
@@ -38,5 +44,20 @@ url = 'https://www.linkedin.com/in/andrelom/'
 name = 'email'
 url = 'mailto:andrelom@gmail.com'
 
-[params.assets]
-disableFingerprinting = true
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 1
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+weight = 3

@@ -3,9 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://andrelom.github.io/endless/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/posts/get-site-context-item-in-jss-api-and-graphql-calls/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/graphql/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/helpers/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/jss/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/posts/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/</loc>
+    <lastmod>2023-01-28T21:16:50-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/archives/</loc>
   </url><url>
     <loc>https://andrelom.github.io/endless/categories/</loc>
   </url><url>
-    <loc>https://andrelom.github.io/endless/tags/</loc>
+    <loc>https://andrelom.github.io/endless/search/</loc>
   </url>
 </urlset>
