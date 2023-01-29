@@ -45,7 +45,7 @@ Now we can do a very simple operation. When JSS calls are made via the standard 
 
 If this value is available in the HTTP Context URL, we can access the home item, otherwise (the "item" parameter is not in the URL Query) we will try to access the context item (indicating that we are likely in a GraphQL call).
 
-The solution presented below has been simplified in order to facilitate reading and understanding.
+The solution presented below has been simplified to make it easier to read and understand. Once we have the home item, we just need to access the parent item to get the site.
 
 ```C#
 public static Item GetContextHomeItem()
@@ -58,7 +58,7 @@ public static Item GetContextHomeItem()
     var url = HttpContext.Current.Request.Url;
     var uid = HttpUtility.ParseQueryString(url.Query).Get(key);
 
-    if (string.IsNullOrWhiteSpace(uid))
+    if (!string.IsNullOrWhiteSpace(uid))
     {
         return Utilities.GetItem(uid);
     }
