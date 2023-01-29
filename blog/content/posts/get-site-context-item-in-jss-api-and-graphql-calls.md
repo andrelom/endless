@@ -70,7 +70,7 @@ public static Item GetContextHomeItem()
         return null;
     }
 
-    return GetItem($"{site.Paths.Path}/Home");
+    return Utilities.GetItem($"{site.Paths.Path}/Home");
 }
 ```
 
