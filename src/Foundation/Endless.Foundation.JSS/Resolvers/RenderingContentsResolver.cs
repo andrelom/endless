@@ -45,6 +45,10 @@ namespace Endless.Foundation.JSS.Resolvers
             {
                 rendering.DataSource = item.ID.ToString().ToUpper();
             }
+            else
+            {
+                rendering.DataSource = null;
+            }
         }
 
         #endregion
