@@ -7,7 +7,7 @@ date: 2023-01-28T21:16:50-03:00
 draft: false
 ---
 
-In some projects we are faced with activities that lead us to create new pipelines or even a new service layout for applications using Sitecore JSS. In these situations, it is common to need to access the site's context item.
+In some projects, we are faced with activities that lead us to create new pipelines or even a new layout service for applications using Sitecore JSS. In these situations, it is common to need to access the site's context item.
 
 The problem is that many times these pipelines or layout services are used either for API calls (a.k.a. "/sitecore/api/layout/render/jss") or GraphQL (a.k.a. "/sitecore/api/graph/edge"). In the execution context of both situations, access to the context item alternates, and in API-type calls, the object will not point to the site item we expect.
 
