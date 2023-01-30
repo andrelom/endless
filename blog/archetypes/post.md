@@ -1,7 +1,7 @@
 ---
 author: "{{ site.Params.author }}"
 title: "{{ replace .Name "-" " " | title }}"
-description: "Article description."
+description: ""
 tags: []
 date: {{ .Date }}
 draft: true
