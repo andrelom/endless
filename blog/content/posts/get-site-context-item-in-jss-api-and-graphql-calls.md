@@ -58,7 +58,7 @@ public static Item GetContextHomeItem()
     var url = HttpContext.Current.Request.Url;
     var uid = HttpUtility.ParseQueryString(url.Query).Get(key);
 
-    if (!string.IsNullOrWhiteSpace(uid))
+    if (uid?.IsValidGuid() ?? false)
     {
         return Utilities.GetItem(uid);
     }
