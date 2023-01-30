@@ -49,6 +49,10 @@ namespace Endless.Foundation.JSS.Pipelines
             {
                 result.DataSource = item.ID.ToString().ToUpper();
             }
+            else
+            {
+                result.DataSource = null;
+            }
         }
 
         #endregion
