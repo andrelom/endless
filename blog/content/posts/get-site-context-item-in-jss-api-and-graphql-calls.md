@@ -78,4 +78,4 @@ public static Item GetContextHomeItem()
 
 The main idea of this article is not just to present a proposed solution, which by the way can be improved in many aspects, but to help us remember that when dealing with JSS, we are possibly dealing with two fronts, with HTTP requests being made directly to the standard API and others made via GraphQL, and keeping an eye on these details can help us to create creative and reliable projects.
 
-> You can access the complete source code used in this article through the [GitHub repository](https://github.com/andrelom/endless/blob/b6b50690a7f4cc8c0d991a3a3f5ab904aae97c4a/src/Foundation/Endless.Foundation.Core/Utilities.cs#L31).
+> You can access the complete source code used in this article through the [GitHub repository](https://github.com/andrelom/endless/blob/019adb378ff96f7ea7da54a7c87960a1f5bd5655/src/Foundation/Endless.Foundation.Core/Utilities.cs#L34).
