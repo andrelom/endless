@@ -19,9 +19,9 @@ packages/
 blog/public/
 blog/resources/_gen/
 
-blog/assets/jsconfig.json
-blog/hugo_stats.json
 blog/.hugo_build.lock
+blog/hugo_stats.json
+blog/assets/jsconfig.json
 
 blog/hugo.exe
 blog/hugo.darwin
