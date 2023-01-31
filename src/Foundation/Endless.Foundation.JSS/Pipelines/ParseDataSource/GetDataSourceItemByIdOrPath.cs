@@ -1,4 +1,6 @@
 using Endless.Foundation.JSS.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines.ParseDataSource;
 using System;
@@ -9,9 +11,9 @@ namespace Endless.Foundation.JSS.Pipelines.ParseDataSource
     {
         private readonly IDataSourceTokenService _dataSourceTokenService;
 
-        public GetDataSourceItemByIdOrPath(IDataSourceTokenService dataSourceTokenService)
+        public GetDataSourceItemByIdOrPath()
         {
-            _dataSourceTokenService = dataSourceTokenService;
+            _dataSourceTokenService = ServiceLocator.ServiceProvider.GetService<IDataSourceTokenService>();
         }
 
         public new void Process(ParseDataSourceArgs args)
