@@ -5,13 +5,13 @@ using Sitecore.LayoutService.ItemRendering;
 using Sitecore.LayoutService.Presentation.Pipelines.RenderJsonRendering;
 using System;
 
-namespace Endless.Foundation.JSS.Pipelines
+namespace Endless.Foundation.JSS.Pipelines.RenderJsonRendering
 {
-    public class InitializeRenderJsonRendering : Initialize
+    public class Initialize : Sitecore.LayoutService.Presentation.Pipelines.RenderJsonRendering.Initialize
     {
         private readonly IDataSourceTokenService _dataSourceTokenService;
 
-        public InitializeRenderJsonRendering(IConfiguration configuration, IDataSourceTokenService dataSourceTokenService) : base(configuration)
+        public Initialize(IConfiguration configuration, IDataSourceTokenService dataSourceTokenService) : base(configuration)
         {
             _dataSourceTokenService = dataSourceTokenService;
         }

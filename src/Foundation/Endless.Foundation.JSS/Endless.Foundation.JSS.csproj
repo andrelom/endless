@@ -71,12 +71,12 @@
     <PackageReference Include="Sitecore.Assemblies.Platform" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\JSS\Endless.Foundation.JSS.InitializeRenderJsonRendering.config" />
+    <Content Include="App_Config\Include\Foundation\JSS\Endless.Foundation.JSS.Pipelines.config" />
     <Content Include="App_Config\Include\Foundation\JSS\Endless.Foundation.JSS.ServicesConfigurator.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pipelines\InitializeRenderJsonRendering.cs" />
+    <Compile Include="Pipelines\RenderJsonRendering\Initialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resolvers\RenderingContentsResolver.cs" />
     <Compile Include="ServicesConfigurator.cs" />
