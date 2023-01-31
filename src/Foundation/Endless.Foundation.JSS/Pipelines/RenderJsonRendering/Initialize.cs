@@ -20,29 +20,26 @@ namespace Endless.Foundation.JSS.Pipelines.RenderJsonRendering
         {
             Assert.ArgumentNotNull(args, "args");
 
-            var result = base.CreateResultInstance(args);
-
             try
             {
-                ResolveSiteOrHomeToken(result);
+                if (_dataSourceTokenService.HasToken(args.Rendering?.DataSource))
+                {
+                    return ResolveSiteOrHomeToken(args);
+                }
             }
             catch (Exception ex)
             {
                 Log.Error("Endless - Initialize Render JSON Rendering", ex, this);
             }
 
-            return result;
+            return base.CreateResultInstance(args);
         }
 
         #region Private Methods
 
-        private void ResolveSiteOrHomeToken(RenderedJsonRendering result)
+        private RenderedJsonRendering ResolveSiteOrHomeToken(RenderJsonRenderingArgs args)
         {
-            if (!_dataSourceTokenService.HasToken(result.DataSource))
-            {
-                return;
-            }
-
+            var result = base.CreateResultInstance(args);
             var item = _dataSourceTokenService.ResolveSiteOrHomeToken(result.DataSource);
 
             if (item != null)
@@ -53,6 +50,8 @@ namespace Endless.Foundation.JSS.Pipelines.RenderJsonRendering
             {
                 result.DataSource = null;
             }
+
+            return result;
         }
 
         #endregion
