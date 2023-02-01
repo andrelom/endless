@@ -2,8 +2,10 @@ using Endless.Foundation.Core.Extensions;
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Globalization;
 using Sitecore.Sites;
 using System;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 
@@ -13,27 +15,39 @@ namespace Endless.Foundation.Core
     {
         private const string HomePathSuffix = "/Home";
 
-        public static Item GetItem(string path, bool core = false)
+        private const string LanguageUrlQueryKey = "sc_lang";
+
+        public static Item GetItem(string path, Language language = null, bool core = false)
         {
             if (Context.Database == null || Context.Database.IsCore() && !core)
             {
                 return null;
+            }
+
+            if (language != null)
+            {
+                return Context.Database.GetItem(path, language);
             }
 
             return Context.Database.GetItem(path);
         }
 
-        public static Item GetItem(ID id, bool core = false)
+        public static Item GetItem(ID id, Language language = null, bool core = false)
         {
             if (Context.Database == null || Context.Database.IsCore() && !core)
             {
                 return null;
             }
 
+            if (language != null)
+            {
+                return Context.Database.GetItem(id, language);
+            }
+
             return Context.Database.GetItem(id);
         }
 
-        public static Item GetSiteItemByName(string name)
+        public static Item GetSiteItemByName(string name, Language language = null)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -49,6 +63,11 @@ namespace Endless.Foundation.Core
                 return null;
             }
 
+            if (language != null)
+            {
+                return GetItem(site.RootPath, language);
+            }
+
             return GetItem(site.RootPath);
         }
 
@@ -61,64 +80,91 @@ namespace Endless.Foundation.Core
 
         public static Item GetSitecoreContextHomeItem()
         {
-            var site = Context.Item?.GetRelativeSite();
+            var site = Context.Item?.GetRelativeSite(Context.Item.Language);
 
             if (site == null)
             {
                 return null;
             }
 
-            return GetItem($"{site.Paths.Path}{HomePathSuffix}");
+            return GetItem($"{site.Paths.Path}{HomePathSuffix}", site.Language);
         }
 
         public static Item GetHttpContextHomeItem()
         {
             var url = HttpContext.Current.Request.Url;
-            var site = GetSiteItemByUrlQuery(url);
+            var query = HttpUtility.ParseQueryString(url.Query);
+
+            var site = GetSiteItemByUrlQuery(query);
 
             if (site != null)
             {
-                return GetItem($"{site.Paths.Path}{HomePathSuffix}");
+                return GetItem($"{site.Paths.Path}{HomePathSuffix}", site.Language);
             }
 
-            var item = GetItemByUrlQuery(url);
+            var item = GetItemByUrlQuery(query);
 
-            if (item != null)
-            {
-                if (item.Paths.Path.EndsWith(HomePathSuffix, StringComparison.OrdinalIgnoreCase))
-                {
-                    return item;
-                }
-
-                return GetItem($"{item.Paths.Path}{HomePathSuffix}");
-            }
-
-            return null;
-        }
-
-        #region Private Methods
-
-        private static Item GetSiteItemByUrlQuery(Uri url)
-        {
-            const string key = "sc_site";
-
-            var value = HttpUtility.ParseQueryString(url.Query).Get(key);
-
-            return GetSiteItemByName(value);
-        }
-
-        private static Item GetItemByUrlQuery(Uri url)
-        {
-            const string key = "item";
-
-            var value = HttpUtility.ParseQueryString(url.Query).Get(key);
-
-            if (!value?.IsValidGuid() ?? true)
+            if (item == null)
             {
                 return null;
             }
 
-            return GetItem(new ID(value));
+            if (item.Paths.Path.EndsWith(HomePathSuffix, StringComparison.OrdinalIgnoreCase))
+            {
+                return item;
+            }
+
+            return GetItem($"{item.Paths.Path}{HomePathSuffix}", item.Language);
+        }
+
+        #region Private Methods
+
+        private static Item GetSiteItemByUrlQuery(NameValueCollection query)
+        {
+            const string key = "sc_site";
+
+            var site = query.Get(key);
+
+            if (string.IsNullOrWhiteSpace(site))
+            {
+                return null;
+            }
+
+            var lang = query.Get(LanguageUrlQueryKey);
+
+            if (!string.IsNullOrWhiteSpace(lang) && Language.TryParse(lang, out var language))
+            {
+                return GetSiteItemByName(site, language);
+            }
+
+            return GetSiteItemByName(site);
+        }
+
+        private static Item GetItemByUrlQuery(NameValueCollection query)
+        {
+            const string key = "item";
+
+            var guid = query.Get(key);
+
+            if (string.IsNullOrWhiteSpace(guid))
+            {
+                return null;
+            }
+
+            if (!guid?.IsValidGuid() ?? true)
+            {
+                return null;
+            }
+
+            var id = new ID(guid);
+            var lang = query.Get(LanguageUrlQueryKey);
+
+            if (!string.IsNullOrWhiteSpace(lang) && Language.TryParse(lang, out var language))
+            {
+                return GetItem(id, language);
+            }
+
+            return GetItem(id);
         }
 
         #endregion

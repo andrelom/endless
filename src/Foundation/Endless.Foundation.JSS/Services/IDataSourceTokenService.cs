@@ -4,8 +4,10 @@ namespace Endless.Foundation.JSS.Services
 {
     public interface IDataSourceTokenService
     {
-        bool HasToken(string value);
+        bool HasTokens(string value);
 
-        Item ResolveSiteOrHomeToken(string value, Item home = null);
+        string ResolveTokens(string value, Item home = null);
+
+        Item ResolveTokensAndGetItem(string value, Item home = null);
     }
 }

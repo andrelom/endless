@@ -7,11 +7,11 @@ using System;
 
 namespace Endless.Foundation.JSS.Pipelines.ParseDataSource
 {
-    public class GetDataSourceItemByIdOrPath : Sitecore.Pipelines.ParseDataSource.GetDataSourceItemByIdOrPath
+    public class CustomGetDataSourceItemByIdOrPath : GetDataSourceItemByIdOrPath
     {
         private readonly IDataSourceTokenService _dataSourceTokenService;
 
-        public GetDataSourceItemByIdOrPath()
+        public CustomGetDataSourceItemByIdOrPath()
         {
             _dataSourceTokenService = ServiceLocator.ServiceProvider.GetService<IDataSourceTokenService>();
         }
@@ -22,7 +22,7 @@ namespace Endless.Foundation.JSS.Pipelines.ParseDataSource
 
             try
             {
-                if (_dataSourceTokenService.HasToken(args.DataSource))
+                if (_dataSourceTokenService.HasTokens(args.DataSource))
                 {
                     ResolveSiteOrHomeToken(args);
                 }
@@ -33,7 +33,7 @@ namespace Endless.Foundation.JSS.Pipelines.ParseDataSource
             }
             catch (Exception ex)
             {
-                Log.Error("Get DataSource Item By ID or Path", ex, this);
+                Log.Error($"{GetType()}", ex, this);
             }
         }
 
@@ -41,11 +41,15 @@ namespace Endless.Foundation.JSS.Pipelines.ParseDataSource
 
         private void ResolveSiteOrHomeToken(ParseDataSourceArgs args)
         {
-            var item = _dataSourceTokenService.ResolveSiteOrHomeToken(args.DataSource);
+            var item = _dataSourceTokenService.ResolveTokensAndGetItem(args.DataSource);
 
             if (item != null)
             {
                 args.Items.Add(item);
+            }
+            else
+            {
+                Log.Warn($"{GetType()}: Unable to resolve datasource (\"{args.DataSource}\").", this);
             }
 
             args.AbortPipeline();

@@ -6,51 +6,61 @@ namespace Endless.Foundation.JSS.Services
 {
     internal class DataSourceTokenService : IDataSourceTokenService
     {
-        private const string TokenSite = "$site";
+        private const string SiteToken = "$site";
 
-        private const string TokenHome = "$home";
+        private const string HomeToken = "$home";
 
-        public bool HasToken(string value)
+        public bool HasTokens(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
             {
                 return false;
             }
 
-            return value.Contains(TokenSite) ||
-                   value.Contains(TokenHome);
+            return value.Contains(SiteToken) ||
+                   value.Contains(HomeToken);
         }
 
-        public Item ResolveSiteOrHomeToken(string value, Item home = null)
+        public string ResolveTokens(string value, Item home = null)
         {
-            if (!HasToken(value))
+            if (!HasTokens(value))
             {
-                return null;
+                return value;
             }
 
-            var source = home ?? Utilities.GetContextHomeItem();
+            var source = GetSource(home);
 
             if (source == null)
             {
-                Log.Error("Endless - Resolve Site or Home token: Unable to get the home item.", this);
+                return value;
+            }
 
+            value = value.Contains(SiteToken) ? ResolveSiteToken(value, source) : value;
+            value = value.Contains(HomeToken) ? ResolveHomeToken(value, source) : value;
+
+            return value;
+        }
+
+        public Item ResolveTokensAndGetItem(string value, Item home = null)
+        {
+            if (!HasTokens(value))
+            {
                 return null;
             }
 
-            Item target = null;
+            var source = GetSource(home);
 
-            if (value.Contains(TokenSite))
+            if (source == null)
             {
-                target = ResolveSiteToken(value, source);
+                return null;
             }
-            else if (value.Contains(TokenHome))
-            {
-                target = ResolveHomeToken(value, source);
-            }
+
+            var path = ResolveTokens(value, source);
+            var target = Utilities.GetItem(path, source.Language);
 
             if (target == null)
             {
-                Log.Error($"Endless - Resolve Site or Home token: Unable to resolve token (Value: \"{value}\", Home: \"{source.ID}\").", this);
+                Log.Error($"{GetType()}: Unable to resolve item (Value: \"{value}\", Home: \"{source.ID}\").", this);
             }
 
             return target;
@@ -58,28 +68,38 @@ namespace Endless.Foundation.JSS.Services
 
         #region Private Methods
 
-        private static Item ResolveSiteToken(string value, Item home)
+        private Item GetSource(Item home = null)
         {
-            if (!value?.Contains(TokenSite) ?? true || home == null)
+            var source = home ?? Utilities.GetContextHomeItem();
+
+            if (source != null)
             {
-                return null;
+                return home;
             }
 
-            var path = value.Replace(TokenSite, home.Parent.Paths.Path);
+            Log.Error($"{GetType()}: Unable to get the home item.", this);
 
-            return Utilities.GetItem(path);
+            return null;
         }
 
-        private static Item ResolveHomeToken(string value, Item home)
+        private static string ResolveSiteToken(string value, Item home)
         {
-            if (!value?.Contains(TokenHome) ?? true || home == null)
+            if (!value?.Contains(SiteToken) ?? true || home == null)
             {
                 return null;
             }
 
-            var path = value.Replace(TokenHome, home.Paths.Path);
+            return value.Replace(SiteToken, home.Parent.Paths.Path);
+        }
 
-            return Utilities.GetItem(path);
+        private static string ResolveHomeToken(string value, Item home)
+        {
+            if (!value?.Contains(HomeToken) ?? true || home == null)
+            {
+                return null;
+            }
+
+            return value.Replace(HomeToken, home.Paths.Path);
         }
 
         #endregion
