@@ -5,6 +5,7 @@ using Sitecore.Data.Items;
 using Sitecore.Globalization;
 using Sitecore.Sites;
 using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
@@ -32,6 +33,11 @@ namespace Endless.Foundation.Core
             return Context.Database.GetItem(path);
         }
 
+        public static IEnumerable<Item> GetItems(IEnumerable<string> paths, Language language = null, bool core = false)
+        {
+            return paths?.Select(path => GetItem(path, language, core)).Where(item => item != null) ?? Array.Empty<Item>();
+        }
+
         public static Item GetItem(ID id, Language language = null, bool core = false)
         {
             if (Context.Database == null || Context.Database.IsCore() && !core)
@@ -45,6 +51,11 @@ namespace Endless.Foundation.Core
             }
 
             return Context.Database.GetItem(id);
+        }
+
+        public static IEnumerable<Item> GetItems(IEnumerable<ID> ids, Language language = null, bool core = false)
+        {
+            return ids?.Select(id => GetItem(id, language, core)).Where(item => item != null) ?? Array.Empty<Item>();
         }
 
         public static Item GetSiteItemByName(string name, Language language = null)

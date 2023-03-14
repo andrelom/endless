@@ -62,6 +62,9 @@
   </ItemGroup>
   <!-- Centrally Managing Package Versions -->
   <ItemGroup>
+    <!-- Others -->
+    <PackageReference Include="Flurl" />
+    <PackageReference Include="Humanizer.Core" />
     <!-- Sitecore -->
     <PackageReference Include="Sitecore.Kernel" />
     <PackageReference Include="Sitecore.ContentSearch" />
@@ -74,6 +77,7 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Extensions\DatabaseExtensions.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -105,11 +109,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
