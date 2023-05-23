@@ -6,7 +6,16 @@
     <description>Recent content on André Moraes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jan 2023 21:16:50 -0300</lastBuildDate><atom:link href="https://andrelom.github.io/endless/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 03:47:58 -0300</lastBuildDate><atom:link href="https://andrelom.github.io/endless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seamless Integration of Sitecore Content Hub With Nextjs Using Reverse Proxy Calls</title>
+      <link>https://andrelom.github.io/endless/posts/seamless-integration-of-sitecore-content-hub-with-nextjs-using-reverse-proxy-calls/</link>
+      <pubDate>Tue, 23 May 2023 03:47:58 -0300</pubDate>
+      
+      <guid>https://andrelom.github.io/endless/posts/seamless-integration-of-sitecore-content-hub-with-nextjs-using-reverse-proxy-calls/</guid>
+      <description>Reverse proxy calls streamline the integration of Sitecore Content Hub with Next.js, enhancing security and simplifying the process.</description>
+    </item>
+    
     <item>
       <title>Get site context item in JSS API and GraphQL calls</title>
       <link>https://andrelom.github.io/endless/posts/get-site-context-item-in-jss-api-and-graphql-calls/</link>

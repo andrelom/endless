@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>GraphQL on André Moraes</title>
-    <link>https://andrelom.github.io/endless/tags/graphql/</link>
-    <description>Recent content in GraphQL on André Moraes</description>
+    <title>Sitecore on André Moraes</title>
+    <link>https://andrelom.github.io/endless/tags/sitecore/</link>
+    <description>Recent content in Sitecore on André Moraes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 May 2023 03:47:58 -0300</lastBuildDate><atom:link href="https://andrelom.github.io/endless/tags/graphql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 03:47:58 -0300</lastBuildDate><atom:link href="https://andrelom.github.io/endless/tags/sitecore/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Seamless Integration of Sitecore Content Hub With Nextjs Using Reverse Proxy Calls</title>
       <link>https://andrelom.github.io/endless/posts/seamless-integration-of-sitecore-content-hub-with-nextjs-using-reverse-proxy-calls/</link>
