@@ -1,6 +1,6 @@
 ---
 author: 'André Moraes'
-title: 'Seamless Integration of Sitecore Content Hub With Nextjs Using Reverse Proxy Calls'
+title: 'Seamless Integration of Sitecore Content Hub With Next.js Using Reverse Proxy Calls'
 description: 'Reverse proxy calls streamline the integration of Sitecore Content Hub with Next.js, enhancing security and simplifying the process.'
 tags: ['Sitecore', 'Sitecore Content Hub', 'Sitecore Content Hub One', 'Reverse Proxy', 'GraphQL']
 date: 2023-05-23T03:47:58-03:00
