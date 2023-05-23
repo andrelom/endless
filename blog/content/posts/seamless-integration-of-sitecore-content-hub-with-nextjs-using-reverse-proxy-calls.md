@@ -95,7 +95,7 @@ Remember to adjust the code to match your specific environment and requirements.
 
 ## Conclusion
 
-In conclusion, reverse proxy calls streamline the integration of Sitecore Content Hub with Next.js, enhancing security and simplifying the process.
+Reverse proxy calls streamline the integration of Sitecore Content Hub with Next.js, enhancing security and simplifying the process.
 
 The HTTP Proxy Middleware simplifies the implementation of reverse proxy functionality in Next.js applications by handling low-level configurations. It acts as an intermediary, allowing direct calls to the original endpoint on the back-end while providing security and abstraction for the client-side application.
 
