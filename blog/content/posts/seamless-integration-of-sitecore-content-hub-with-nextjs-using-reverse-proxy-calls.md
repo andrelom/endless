@@ -89,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 ```
 
-This file sets up a reverse proxy using the http-proxy-middleware module. It forwards requests to the specified target ("process.env.APOLLO_SITECORECLOUD_URI") while rewriting the path to remove the proxy part ("/api/system/proxy/sitecorecloud"). The "X-GQL-Token" header is added to the request using the value from the environment variable "APOLLO_SITECORECLOUD_TOKEN".
+This file sets up a reverse proxy using the http-proxy-middleware module. It forwards requests to the specified target ("process.env.APOLLO_SITECORECLOUD_URI") while rewriting the path to remove the proxy part ("/api/proxy/sitecorecloud"). The "X-GQL-Token" header is added to the request using the value from the environment variable "APOLLO_SITECORECLOUD_TOKEN".
 
 Remember to adjust the code to match your specific environment and requirements.
 
