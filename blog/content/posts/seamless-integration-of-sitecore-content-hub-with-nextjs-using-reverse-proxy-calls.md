@@ -58,6 +58,7 @@ Now, let's create the API endpoint with the following code:
 // File: pages/api/proxy/sitecorecloud/[[...sitecorecloud]].api.ts
 
 import type { NextApiRequest, NextApiResponse } from 'next'
+
 import { createProxyMiddleware } from 'http-proxy-middleware'
 
 const proxy = createProxyMiddleware({
