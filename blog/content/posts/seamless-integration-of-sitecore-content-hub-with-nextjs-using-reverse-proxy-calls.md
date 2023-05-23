@@ -4,7 +4,7 @@ title: 'Seamless Integration of Sitecore Content Hub With Nextjs Using Reverse P
 description: ''
 tags: []
 date: 2023-05-23T03:47:58-03:00
-draft: true
+draft: false
 ---
 
 Efficient and secure connections between different platforms are crucial in the ever-evolving web development landscape. One such scenario is integrating Sitecore Content Hub with Next.js applications.
@@ -23,7 +23,7 @@ By leveraging reverse proxy calls, developers can enhance security and effective
 
 ## Implementation
 
-To get started, we need to install the `http-proxy-middleware` npm module. Open your terminal and run the following command:
+To get started, we need to install the "http-proxy-middleware" npm module. Open your terminal and run the following command:
 
 ```sh
 yarn add http-proxy-middleware
@@ -46,9 +46,9 @@ const sitecorecloud = createApolloClient({
 export default sitecorecloud
 ```
 
-As you can observe, when executing this call on the server, we direct it to the original endpoint. However, if we're not on the server, we use the reverse proxy endpoint instead. Additionally, please note that environment variables which don't begin with `NEXT_PUBLIC_` will not be accessible on the client side.
+As you can observe, when executing this call on the server, we direct it to the original endpoint. However, if we're not on the server, we use the reverse proxy endpoint instead. Additionally, please note that environment variables which don't begin with "NEXT_PUBLIC\_" will not be accessible on the client side.
 
-Make sure to replace `endless-lib/apollo` with the appropriate import for your specific setup.
+Make sure to replace "endless-lib/apollo" with the appropriate import for your specific setup.
 
 ### Creating the API Endpoint (Reverse Proxy)
 
@@ -88,7 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 ```
 
-This file sets up a reverse proxy using the http-proxy-middleware module. It forwards requests to the specified target (`process.env.APOLLO_SITECORECLOUD_URI`) while rewriting the path to remove the proxy part (`/api/system/proxy/sitecorecloud`). The `X-GQL-Token` header is added to the request using the value from the environment variable `APOLLO_SITECORECLOUD_TOKEN`.
+This file sets up a reverse proxy using the http-proxy-middleware module. It forwards requests to the specified target ("process.env.APOLLO_SITECORECLOUD_URI") while rewriting the path to remove the proxy part ("/api/system/proxy/sitecorecloud"). The "X-GQL-Token" header is added to the request using the value from the environment variable "APOLLO_SITECORECLOUD_TOKEN".
 
 Remember to adjust the code to match your specific environment and requirements.
 
