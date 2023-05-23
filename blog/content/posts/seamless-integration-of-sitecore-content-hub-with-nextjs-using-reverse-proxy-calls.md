@@ -13,13 +13,11 @@ By utilizing Next.js and implementing reverse proxy calls, developers can optimi
 
 ## Benefits of Reverse Proxy Calls
 
-When integrating Next.js with Sitecore Content Hub, reverse proxy calls offer an additional layer of security. By routing requests through a reverse proxy server, the Content Hub endpoint remains shielded from direct exposure. This isolation fortifies protection against attacks and unauthorized access attempts, bolstering overall security.
+When integrating Next.js with Sitecore Content Hub, reverse proxy calls offer an additional layer of security. By routing requests through a reverse proxy server, the Content Hub endpoint remains shielded from direct exposure.
 
 ### Hidden Endpoint and API Token
 
 Reverse proxy calls also ensure the concealment of sensitive information, such as the Content Hub endpoint and API token, from client-side code. Rather than making direct requests to the Content Hub API, all requests are directed to the reverse proxy server. This approach minimizes the risk of exposing the endpoint and API token to potential threats, providing heightened protection for sensitive information.
-
-By leveraging reverse proxy calls, developers can enhance security and effectively hide the endpoint and API token. This approach strengthens the integration between Next.js and Sitecore Content Hub, establishing a more secure foundation for content management and delivery.
 
 ## Implementation
 
