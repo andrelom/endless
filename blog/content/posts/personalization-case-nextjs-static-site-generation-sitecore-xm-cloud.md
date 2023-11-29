@@ -2,16 +2,7 @@
 author: 'André Moraes'
 title: 'Navigating the Personalization Landscape: A Case for Next.js Static Site Generation with Sitecore XM Cloud'
 description: 'Explore the power of Next.js Static Site Generation in a integration with Sitecore XM Cloud. Uncover the benefits of personalized user experiences while overcoming the challenges of server-side rendering.'
-tags:
-  [
-    'Sitecore',
-    'Sitecore XM Cloud',
-    'Sitecore Content Hub',
-    'Sitecore Content Hub One',
-    'Personalization',
-    'Static Site Generation',
-    'Next.js',
-  ]
+tags: ['Sitecore', 'Sitecore XM Cloud', 'Personalization', 'Static Site Generation', 'Next.js']
 date: 2023-11-29T04:25:32-03:00
 draft: false
 ---

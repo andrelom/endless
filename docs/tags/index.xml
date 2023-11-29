@@ -35,24 +35,6 @@
     </item>
     
     <item>
-      <title>Sitecore Content Hub</title>
-      <link>https://andrelom.github.io/endless/tags/sitecore-content-hub/</link>
-      <pubDate>Wed, 29 Nov 2023 04:25:32 -0300</pubDate>
-      
-      <guid>https://andrelom.github.io/endless/tags/sitecore-content-hub/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sitecore Content Hub One</title>
-      <link>https://andrelom.github.io/endless/tags/sitecore-content-hub-one/</link>
-      <pubDate>Wed, 29 Nov 2023 04:25:32 -0300</pubDate>
-      
-      <guid>https://andrelom.github.io/endless/tags/sitecore-content-hub-one/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Sitecore XM Cloud</title>
       <link>https://andrelom.github.io/endless/tags/sitecore-xm-cloud/</link>
       <pubDate>Wed, 29 Nov 2023 04:25:32 -0300</pubDate>
@@ -85,6 +67,24 @@
       <pubDate>Tue, 23 May 2023 03:47:58 -0300</pubDate>
       
       <guid>https://andrelom.github.io/endless/tags/reverse-proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sitecore Content Hub</title>
+      <link>https://andrelom.github.io/endless/tags/sitecore-content-hub/</link>
+      <pubDate>Tue, 23 May 2023 03:47:58 -0300</pubDate>
+      
+      <guid>https://andrelom.github.io/endless/tags/sitecore-content-hub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sitecore Content Hub One</title>
+      <link>https://andrelom.github.io/endless/tags/sitecore-content-hub-one/</link>
+      <pubDate>Tue, 23 May 2023 03:47:58 -0300</pubDate>
+      
+      <guid>https://andrelom.github.io/endless/tags/sitecore-content-hub-one/</guid>
       <description></description>
     </item>
     
