@@ -19,7 +19,7 @@ To address these challenges, the webinar emphasized the innovative approach of i
 
 ### File System Structure Evolution
 
-A significant structural change in the file system route enhances this approach. The root file, previously located at "src\pages\\[[...path]].tsx," has been strategically relocated to "\src\pages[country][username][[...path]].tsx." This shift optimizes the organization of dynamic content and supports the personalization goals of individual user sessions.
+A significant structural change in the file system route enhances this approach. The root file, previously located at "src\pages\\[[...path]].tsx," has been strategically relocated to "\src\pages\\[country]\\[username]\\[[...path]].tsx." This shift optimizes the organization of dynamic content and supports the personalization goals of individual user sessions.
 
 ### Example Code Revisited:
 
