@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Next.js on André Moraes</title>
+    <link>https://andrelom.github.io/endless/tags/next.js/</link>
+    <description>Recent content in Next.js on André Moraes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Nov 2023 04:25:32 -0300</lastBuildDate><atom:link href="https://andrelom.github.io/endless/tags/next.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navigating the Personalization Landscape: A Case for Next.js Static Site Generation with Sitecore XM Cloud</title>
+      <link>https://andrelom.github.io/endless/posts/personalization-case-nextjs-static-site-generation-sitecore-xm-cloud/</link>
+      <pubDate>Wed, 29 Nov 2023 04:25:32 -0300</pubDate>
+      
+      <guid>https://andrelom.github.io/endless/posts/personalization-case-nextjs-static-site-generation-sitecore-xm-cloud/</guid>
+      <description>Explore the power of Next.js Static Site Generation in a integration with Sitecore XM Cloud. Uncover the benefits of personalized user experiences while overcoming the challenges of server-side rendering.</description>
+    </item>
+    
+  </channel>
+</rss>

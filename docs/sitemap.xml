@@ -5,16 +5,16 @@
     <loc>https://andrelom.github.io/endless/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
   </url><url>
-    <loc>https://andrelom.github.io/endless/tags/graphql/</loc>
-    <lastmod>2023-11-29T04:25:32-03:00</lastmod>
-  </url><url>
     <loc>https://andrelom.github.io/endless/posts/personalization-case-nextjs-static-site-generation-sitecore-xm-cloud/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
   </url><url>
-    <loc>https://andrelom.github.io/endless/posts/</loc>
+    <loc>https://andrelom.github.io/endless/tags/next.js/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
   </url><url>
-    <loc>https://andrelom.github.io/endless/tags/reverse-proxy/</loc>
+    <loc>https://andrelom.github.io/endless/tags/personalization/</loc>
+    <lastmod>2023-11-29T04:25:32-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/posts/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
   </url><url>
     <loc>https://andrelom.github.io/endless/tags/sitecore/</loc>
@@ -26,8 +26,20 @@
     <loc>https://andrelom.github.io/endless/tags/sitecore-content-hub-one/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
   </url><url>
+    <loc>https://andrelom.github.io/endless/tags/sitecore-xm-cloud/</loc>
+    <lastmod>2023-11-29T04:25:32-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/static-site-generation/</loc>
+    <lastmod>2023-11-29T04:25:32-03:00</lastmod>
+  </url><url>
     <loc>https://andrelom.github.io/endless/tags/</loc>
     <lastmod>2023-11-29T04:25:32-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/graphql/</loc>
+    <lastmod>2023-05-23T03:47:58-03:00</lastmod>
+  </url><url>
+    <loc>https://andrelom.github.io/endless/tags/reverse-proxy/</loc>
+    <lastmod>2023-05-23T03:47:58-03:00</lastmod>
   </url><url>
     <loc>https://andrelom.github.io/endless/posts/seamless-integration-of-sitecore-content-hub-with-nextjs-using-reverse-proxy-calls/</loc>
     <lastmod>2023-05-23T03:47:58-03:00</lastmod>
