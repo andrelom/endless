@@ -15,13 +15,13 @@ In many applications dealing with Sitecore XM Cloud, the need for Connected and 
 
 ### The Power of Internal URL Rewriting
 
-To address these challenges, the webinar emphasized the innovative approach of internal URL rewriting within the Next.js middleware. By leveraging this technique, teams can achieve Static Site Generation (SSG) and still deliver unique and personalized output for each user, without the resource-intensive nature of server-side rendering.
+To address these challenges, the webinar emphasized the approach of internal URL rewriting within the Next.js middleware. By leveraging this technique, teams can achieve Static Site Generation (SSG) and still deliver unique and personalized output for each user, without the resource-intensive nature of server-side rendering.
 
 ### File System Structure Evolution
 
 A significant structural change in the file system route enhances this approach. The root file, previously located at "src\pages\\[[...path]].tsx," has been strategically relocated to "\src\pages\\[country]\\[username]\\[[...path]].tsx." This shift optimizes the organization of dynamic content and supports the personalization goals of individual user sessions.
 
-### Example Code:
+#### Example Code:
 
 ```typescript
 import type { NextRequest, NextFetchEvent } from 'next/server'
@@ -74,6 +74,6 @@ export default async function handler(req: NextRequest, event: NextFetchEvent) {
 
 ### Closing Thoughts
 
-While personalization is a crucial aspect of modern web applications, the webinar emphasized the need to carefully consider the downsides of server-side rendering, especially in resource-intensive scenarios. The innovative use of internal URL rewriting within the Next.js middleware emerges as a robust solution, enabling Static Site Generation and personalized content delivery without compromising performance.
+While personalization is a crucial aspect of modern web applications, the webinar emphasized the need to carefully consider the downsides of server-side rendering, especially in resource-intensive scenarios. The use of internal URL rewriting within the Next.js middleware emerges as a robust solution, enabling Static Site Generation and personalized content delivery without compromising performance.
 
 For a more in-depth example to explore the implementation, please refer to the source code available in [this Github repository](https://github.com/andrelom/xmcloud-demo).
